@@ -2,11 +2,11 @@ let computerMove = '';
 function pickChoice() {
     const randomNumber = Math.random();
     if (randomNumber >= 0 && randomNumber < 1 / 3) {
-        computerMove = 'Rock';
+        computerMove = 'rock';
     } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-        computerMove = 'Paper';
+        computerMove = 'paper';
     } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-        computerMove = 'Scissors';
+        computerMove = 'scissors';
     }
     return computerMove;
 }
@@ -24,11 +24,11 @@ if (scoreObject === null) {
 }
 document.body.addEventListener('keydown', (event) => {
     if (event.key === 'r') {
-        playGame('Rock');
+        playGame('rock');
     } else if (event.key === 'p') {
-        playGame('Paper');
+        playGame('paper');
     } else if (event.key === 's') {
-        playGame('Scissors')
+        playGame('scissors')
     }
 })
 
@@ -39,29 +39,29 @@ function playGame(playerMove) {
 
     let result = '';
 
-    if (playerMove === 'Rock') {
-        if (functionMove === 'Rock') {
+    if (playerMove === 'rock') {
+        if (functionMove === 'rock') {
             result = 'Tie';
-        } else if (functionMove === 'Paper') {
+        } else if (functionMove === 'paper') {
             result = 'Win';
-        } else if (functionMove === 'Scissors') {
+        } else if (functionMove === 'scissors') {
             result = 'loss'
         }
-    } else if (playerMove === 'Paper') {
-        if (functionMove === 'Rock') {
+    } else if (playerMove === 'paper') {
+        if (functionMove === 'rock') {
             result = 'loss';
-        } else if (functionMove === 'Paper') {
+        } else if (functionMove === 'paper') {
             result = 'Tie';
-        } else if (functionMove === 'Scissors') {
+        } else if (functionMove === 'scissors') {
             result = 'Win'
         }
-    } else if (playerMove === 'Scissors') {
+    } else if (playerMove === 'scissors') {
 
-        if (functionMove === 'Rock') {
+        if (functionMove === 'rock') {
             result = 'loss';
-        } else if (functionMove === 'Paper') {
+        } else if (functionMove === 'paper') {
             result = 'Win';
-        } else if (functionMove === 'Scissors') {
+        } else if (functionMove === 'scissors') {
             result = 'Tie'
         }
     }
